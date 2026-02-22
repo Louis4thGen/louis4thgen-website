@@ -143,10 +143,21 @@
 .demo {
   font-size: 0.8rem;
   color: #6c757d;
+  text-align: left;
 }
 
 .demo p {
-  margin: 0;
+  margin: 0.25rem 0;
+}
+
+.demo code {
+  background: rgba(0, 0, 0, 0.1);
+  color: #2C3E50;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  font-weight: 600;
 }
 
 /* Packages Section */

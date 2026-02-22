@@ -63,9 +63,10 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className={styles.contact}>
           <p>
-            <strong>Contact:</strong>&nbsp;
+            <strong>Contact:</strong><br />
             <a href="mailto:edmund@louis4thgen.com">edmund@louis4thgen.com</a>
-            &nbsp;•&nbsp;
+            <span className={styles.separator}>&nbsp;•&nbsp;</span>
+            <br className={styles.mobileBr} />
             <a href="mailto:louis@louis4thgen.com">louis@louis4thgen.com</a>
           </p>
         </div>

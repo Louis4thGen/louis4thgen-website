@@ -123,11 +123,15 @@
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: auto;
   backdrop-filter: blur(10px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.9rem;
+  word-break: break-all;
+  max-width: 100%;
 }
 
 .contact a {
@@ -228,4 +232,30 @@
     font-size: 1rem;
     padding: 1rem 1.5rem;
   }
+  
+  .footer {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .contact {
+    font-size: 0.8rem;
+    line-height: 1.8;
+  }
+  
+  .mobileBr {
+    display: block;
+  }
+  
+  .separator {
+    display: none;
+  }
+}
+
+.separator {
+  display: inline;
+}
+
+.mobileBr {
+  display: none;
+}
 }

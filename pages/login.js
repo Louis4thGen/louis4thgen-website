@@ -3,24 +3,25 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { isAuthorized, getAuthError } from '../lib/auth'
+import { isAuthorized, getAuthError, getUserDisplayName } from '../lib/auth'
 import styles from '../styles/Login.module.css'
 
 export default function Login() {
-  const [email, setEmail] = useState('')
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
   const router = useRouter()
 
   const handleLogin = async (e) => {
     e.preventDefault()
-    if (!email.trim()) return
+    if (!username.trim() || !password.trim()) return
 
     setIsLoading(true)
     setError('')
     
     // Check authorization
-    const authError = getAuthError(email)
+    const authError = getAuthError(username, password)
     
     if (authError) {
       setTimeout(() => {
@@ -30,7 +31,14 @@ export default function Login() {
       return
     }
     
-    // Authorized - proceed to demo
+    // Authorized - store user info and proceed to demo
+    const displayName = getUserDisplayName(username)
+    localStorage.setItem('louis4thgen_user', JSON.stringify({
+      username: username.toLowerCase().trim(),
+      displayName: displayName,
+      loginTime: new Date().toISOString()
+    }))
+    
     setTimeout(() => {
       router.push('/demo')
     }, 1000)
@@ -60,15 +68,30 @@ export default function Login() {
 
           <form onSubmit={handleLogin} className={styles.loginForm}>
             <div className={styles.inputGroup}>
-              <label htmlFor="email" className={styles.label}>Email Address</label>
+              <label htmlFor="username" className={styles.label}>Username</label>
               <input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
+                id="username"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="edmund"
                 className={styles.input}
                 required
+                autoComplete="username"
+              />
+            </div>
+
+            <div className={styles.inputGroup}>
+              <label htmlFor="password" className={styles.label}>Password</label>
+              <input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter password"
+                className={styles.input}
+                required
+                autoComplete="current-password"
               />
             </div>
 
@@ -81,7 +104,7 @@ export default function Login() {
             <button
               type="submit"
               className={styles.loginButton}
-              disabled={isLoading || !email.trim()}
+              disabled={isLoading || !username.trim() || !password.trim()}
             >
               {isLoading ? 'Connecting to Louis...' : 'Continue to Louis'}
             </button>
@@ -90,7 +113,9 @@ export default function Login() {
           <div className={styles.loginFooter}>
             <Link href="/" className={styles.backLink}>← Back to Home</Link>
             <div className={styles.demo}>
-              <p>Demo Mode: Use any email to continue</p>
+              <p><strong>Demo Access:</strong></p>
+              <p>Username: <code>demo</code> | Password: <code>preview</code></p>
+              <p style={{fontSize: '0.75rem', marginTop: '0.5rem'}}>Contact edmund@louis4thgen.com for full access</p>
             </div>
           </div>
         </div>
