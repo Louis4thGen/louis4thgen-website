@@ -41,13 +41,17 @@ html {
   background: #34495e;
 }
 
-/* Ensure Louis logo images have no background on all pages */
+/* FORCE Louis logo transparency - aggressive override */
 img[alt="Louis4thGen"],
-img[alt="Louis"] {
-  background: none !important;
+img[alt="Louis"],
+img[src*="louis-logo"] {
+  background: transparent !important;
   background-color: transparent !important;
+  background-image: none !important;
   border: none !important;
   box-shadow: none !important;
   outline: none !important;
   border-radius: 0 !important;
+  mix-blend-mode: multiply !important;
+  isolation: isolate !important;
 }
