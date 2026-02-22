@@ -3,11 +3,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { isAuthorized, getAuthError } from '../lib/auth'
 import styles from '../styles/Login.module.css'
 
 export default function Login() {
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
   const router = useRouter()
 
   const handleLogin = async (e) => {
@@ -15,8 +17,20 @@ export default function Login() {
     if (!email.trim()) return
 
     setIsLoading(true)
+    setError('')
     
-    // Simulate login for demo (later: real authentication)
+    // Check authorization
+    const authError = getAuthError(email)
+    
+    if (authError) {
+      setTimeout(() => {
+        setError(authError)
+        setIsLoading(false)
+      }, 1000)
+      return
+    }
+    
+    // Authorized - proceed to demo
     setTimeout(() => {
       router.push('/demo')
     }, 1000)
@@ -57,6 +71,12 @@ export default function Login() {
                 required
               />
             </div>
+
+            {error && (
+              <div className={styles.error}>
+                {error}
+              </div>
+            )}
 
             <button
               type="submit"

@@ -143,38 +143,63 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+  
+  .heroContent {
+    gap: 1.5rem;
+  }
+  
   .title {
     font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
   }
   
   .tagline {
     font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
   
   .subtitle {
     font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
   }
   
   .description {
     font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
   }
   
   .primaryButton {
     font-size: 1.1rem;
     padding: 0.875rem 2rem;
-  }
-  
-  .main {
-    padding: 2rem 1rem;
+    width: auto;
+    min-width: 200px;
   }
   
   .louisLogo img {
     width: 150px;
     height: 150px;
   }
+  
+  .footer {
+    padding: 1.5rem 1rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .main {
+    padding: 1rem 0.75rem;
+  }
+  
+  .heroContent {
+    gap: 1rem;
+  }
+  
   .louisLogo img {
     width: 120px;
     height: 120px;
@@ -182,9 +207,25 @@
   
   .title {
     font-size: 1.75rem;
+    line-height: 1.2;
   }
   
   .tagline {
     font-size: 1.1rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+  }
+  
+  .primaryButton {
+    width: 100%;
+    max-width: 280px;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
   }
 }
