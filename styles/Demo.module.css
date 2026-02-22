@@ -65,17 +65,12 @@
 
 .centerLogo {
   transition: transform 0.3s ease;
-  background: rgba(255, 255, 255, 0.95) !important;
+  background: transparent !important;
   border: none !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2) !important;
-  border-radius: 50% !important;
-  padding: 4px !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
   margin: 0 !important;
-  width: 300px !important;
-  height: 300px !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .centerLogo:hover {

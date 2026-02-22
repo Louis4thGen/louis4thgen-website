@@ -53,8 +53,8 @@ export default function Demo() {
             <Image
               src="/images/louis-logo-circular-enhanced.png"
               alt="Louis"
-              width={350}
-              height={350}
+              width={400}
+              height={400}
               className={styles.centerLogo}
             />
             <h1 className={styles.welcomeTitle}>How can I help you today?</h1>

@@ -19,8 +19,8 @@ export default function Home() {
               <Image
                 src="/images/louis-logo-circular-enhanced.png"
                 alt="Louis4thGen"
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 priority
               />
             </div>
@@ -60,17 +60,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <div className={styles.contact}>
-          <p>
-            <strong>Contact:</strong><br />
-            <a href="mailto:edmund@louis4thgen.com">edmund@louis4thgen.com</a>
-            <span className={styles.separator}>&nbsp;•&nbsp;</span>
-            <br className={styles.mobileBr} />
-            <a href="mailto:louis@louis4thgen.com">louis@louis4thgen.com</a>
-          </p>
-        </div>
-      </footer>
+      {/* Contact info removed for cleaner mobile experience */}
     </div>
   )
 }

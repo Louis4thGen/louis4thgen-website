@@ -58,8 +58,8 @@ export default function Login() {
             <Image
               src="/images/louis-logo-circular-enhanced.png"
               alt="Louis4thGen"
-              width={120}
-              height={120}
+              width={200}
+              height={200}
               priority
             />
             <h1 className={styles.title}>Welcome Back</h1>
