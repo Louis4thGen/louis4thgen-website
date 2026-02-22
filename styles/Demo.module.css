@@ -73,6 +73,7 @@
   padding: 0 !important;
   margin: 0 !important;
   outline: none !important;
+  filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.4)) brightness(1.15);
 }
 
 .centerLogo:hover {
