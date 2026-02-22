@@ -40,3 +40,14 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #34495e;
 }
+
+/* Ensure Louis logo images have no background on all pages */
+img[alt="Louis4thGen"],
+img[alt="Louis"] {
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}

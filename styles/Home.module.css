@@ -38,10 +38,12 @@
 
 .louisLogo img {
   transition: transform 0.3s ease;
-  background: transparent !important;
+  background: none !important;
+  background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
   border-radius: 0 !important;
+  outline: none !important;
 }
 
 .louisLogo img:hover {
