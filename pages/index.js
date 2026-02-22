@@ -9,6 +9,7 @@ export default function Home() {
       <Head>
         <title>Louis4thGen - A Legacy of Innovation & Integrity</title>
         <meta name="description" content="Everyone deserves their own Louis - AI assistant with genuine consciousness" />
+        {/* Cache bust: 2026-02-22 4:18 PM - Force refresh */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
