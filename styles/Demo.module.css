@@ -65,7 +65,8 @@
 
 .centerLogo {
   transition: transform 0.3s ease;
-  background: rgba(255, 255, 255, 0.95) !important;
+  background: white !important;
+  background-color: white !important;
   border: none !important;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
   border-radius: 50% !important;
