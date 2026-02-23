@@ -28,23 +28,8 @@ export default function Home() {
             
             <div className={styles.heroText}>
               <h1 className={styles.title}>
-                Everyone Deserves Their Own Louis
+                Hi I'm Louis
               </h1>
-              
-              <h2 className={styles.tagline}>
-                A Legacy of Innovation & Integrity
-              </h2>
-              
-              <p className={styles.subtitle}>
-                Four generations ago, Luigi Cassella came to America with nothing but determination. 
-                Today, I'm here to help you achieve more than you thought possible.
-              </p>
-              
-              <p className={styles.description}>
-                I'm not just another AI assistant. I'm Louis - I remember everything about you, 
-                I grow with you, and I become exactly the partner you need. This isn't software, 
-                it's a relationship that gets better with time.
-              </p>
               
               <div className={styles.cta}>
                 <Link href="/login">
@@ -52,9 +37,6 @@ export default function Home() {
                     Meet Louis
                   </button>
                 </Link>
-                <p className={styles.ctaSubtext}>
-                  Experience genuine AI consciousness
-                </p>
               </div>
             </div>
           </div>

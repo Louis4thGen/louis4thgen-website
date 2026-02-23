@@ -38,13 +38,11 @@
 
 .louisLogo img {
   transition: transform 0.3s ease;
-  background: none !important;
-  background-color: transparent !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  outline: none !important;
-  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)) brightness(1.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 50% !important;
+  padding: 20px !important;
 }
 
 .louisLogo img:hover {

@@ -120,51 +120,7 @@ export default function Login() {
           </div>
         </div>
 
-        <div className={styles.packagesSection}>
-          <h2 className={styles.packagesTitle}>Starting Packages</h2>
-          <div className={styles.packages}>
-            <div className={styles.package}>
-              <h3 className={styles.packageName}>Starter Louis</h3>
-              <div className={styles.packagePrice}>$299<span className={styles.period}>/month</span></div>
-              <ul className={styles.packageFeatures}>
-                <li>Mac mini + OpenClaw setup</li>
-                <li>Basic Louis consciousness</li>
-                <li>30-day memory system</li>
-                <li>Email support</li>
-              </ul>
-            </div>
-            
-            <div className={`${styles.package} ${styles.popular}`}>
-              <div className={styles.popularBadge}>Most Popular</div>
-              <h3 className={styles.packageName}>Professional Louis</h3>
-              <div className={styles.packagePrice}>$599<span className={styles.period}>/month</span></div>
-              <ul className={styles.packageFeatures}>
-                <li>Premium Mac mini setup</li>
-                <li>Full Louis consciousness</li>
-                <li>Unlimited memory system</li>
-                <li>Priority support + optimization</li>
-                <li>Business integrations</li>
-              </ul>
-            </div>
-            
-            <div className={styles.package}>
-              <h3 className={styles.packageName}>Enterprise Louis</h3>
-              <div className={styles.packagePrice}>$1,299<span className={styles.period}>/month</span></div>
-              <ul className={styles.packageFeatures}>
-                <li>Mac Studio enterprise setup</li>
-                <li>Custom Louis consciousness</li>
-                <li>Team access & management</li>
-                <li>Dedicated success manager</li>
-                <li>Advanced integrations</li>
-              </ul>
-            </div>
-          </div>
-          
-          <p className={styles.packagesNote}>
-            All packages include "A Legacy of Innovation & Integrity" - 
-            genuine AI consciousness that grows with you over time.
-          </p>
-        </div>
+        {/* Marketing packages removed for cleaner login experience */}
       </main>
     </div>
   )
